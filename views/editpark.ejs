@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/index">HOME</a>
+    <h3>Add New Park</h3>
+    <div class="container-container">
+        <div class="new-edit-container">
+        <form action="/index/<%= park.id %>?_method=PUT" method="POST">
+            Name: <input class="box" type="text" name="name" value="<%= park.name %>"/><br />
+            State: <input class="box" type="text" name="state" value="<%= park.state %>"/><br />
+            Date of Visit: <input class="box" type="text" name="dov" value="<%= park.dov %>"/><br />
+            Image: <input class="box" type="text" name="img" value="<%= park.img %>"/><br />
+            <input class="add-park" type="submit" name="" value="UPDATE" />
+        </form>
+        </div>
+    </div>
+</body>
+</html>
+</body>
+</html>

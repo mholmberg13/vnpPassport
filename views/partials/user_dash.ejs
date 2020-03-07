@@ -1,0 +1,14 @@
+<a href="/index/new">Add Park</a>
+    <div class="container-container">
+      <div class="container">
+        
+          <% for(let i = 0; i < parks.length; i++){ %>
+            <div class="park-box">
+              <p><strong><%=parks[i].name; %></strong> <br>
+              <img src="<%=parks[i].img; %>"> <br>
+              <a href="/index/<%= parks[i].id %>">See Park</a>
+            </div>
+        <% } %>
+        
+      </div>
+    </div>

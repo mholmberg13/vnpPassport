@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2><%= park.name %></h2>
+    <a href="/index">HOME</a><br>
+    <img class="show-img" src="<%= park.img %>"> <br>
+    <div class="info">
+      NAME: <%= park.name %> <br>
+      STATE: <%= park.state %> <br>
+      DATE OF VIST: <%= park.dov  %><br>
+    </div>
+    <a href="/index/<%= park.id %>/edit">EDIT PARK</a>
+    <div class="buy-delete">
+        <form action="/index/<%= park.id %>?_method=DELETE" method="POST">
+          <input type="submit" value="DELETE" />
+        </form>
+    </div>
+</body>
+</html>

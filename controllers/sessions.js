@@ -17,7 +17,7 @@ router.post('/', (req, res)=>{
     User.findOne({ username: req.body.username },(err, foundUser) => {
         if( bcrypt.compareSync(req.body.password, foundUser.password) ){
             req.session.currentUser = foundUser;
-            res.redirect('/');
+            res.redirect('/index');
         } else {
             res.send('wrong password');
         }
