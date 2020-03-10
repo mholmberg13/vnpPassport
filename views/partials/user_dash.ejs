@@ -1,14 +1,18 @@
-<a href="/index/new">Add Park</a>
-    <div class="container-container">
-      <div class="container">
-        
-          <% for(let i = 0; i < parks.length; i++){ %>
-            <div class="park-box">
-              <p><strong><%=parks[i].name; %></strong> <br>
-              <img src="<%=parks[i].img; %>"> <br>
-              <a href="/index/<%= parks[i].id %>">See Park</a>
+
+<div class="page-container">
+  
+  <div class="container">
+    <%- include('../partials/nav.ejs') %>
+    <% for(let i = 0; i < parks.length; i++){ %>
+      <div class="outer-box">
+        <div class="park-box">
+            <h2><%=parks[i].name; %><h2>
+                <img src="<%=parks[i].img; %>"> <br>
             </div>
-        <% } %>
-        
+            <a href="/index/<%= parks[i].id %>">See Park</a>
       </div>
-    </div>
+    <% } %>
+      
+  </div>
+      
+</div>

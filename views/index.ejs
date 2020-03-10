@@ -2,29 +2,17 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/css/app.css" />
         <title></title>
     </head>
+    
     <body>
-        <h1>
-            <% if(currentUser) { %>
-                Welcome <%=currentUser.username%>!
-            <% } else { %>
-                Welcome!
-            <% } %>
-        </h1>
+        
             <% if(!currentUser) { %>
-                <ul>
-                    <li><a href="/sessions/new">Log In</a></li>
-                    <li><a href="/users/new">Register</a></li>
-                </ul>
+            
+                <%- include('../views/partials/log_in.ejs') %>
             <% } else { %>
-                <ul>
-                    <li>
-                        <form action="/sessions?_method=DELETE" method="POST">
-                            <input type="submit" value="Logout"/>
-                        </form>
-                    </li>
-                </ul>
                 <%- include('../views/partials/user_dash.ejs') %>
             <% } %>
         
