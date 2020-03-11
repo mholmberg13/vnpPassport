@@ -3,14 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/app.css" />
+    <title>Log In</title>
 </head>
 <body>
-    <h1>Sign In</h1>
-    <form action="/sessions" method="POST">
-        <input type="text" name="username" value="User Name">
-        <input type="text" name="password" value="Password">
-        <input type="submit" name="" value="Sign In">
-    </form>
+    <div class="landingpage-container">
+        <div class="landing-container">
+            <h1>Sign In</h1>
+            <form action="/sessions" method="POST">
+                <input type="text" name="username" value="User Name" required>
+                <input type="text" name="password" value="Password" required>
+                <input class="in-up" type="submit" name="" value="Sign In">
+            </form>
+            <div class="register-log">
+                <a href="/users/new">Register</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

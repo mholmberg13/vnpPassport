@@ -3,17 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/app.css" />
     <title>New User</title>
 </head>
 <body>
+    <div class="landingpage-container">
+        <div class="landing-container">
+            <h1>Register</h1>
 
-<h1>New User</h1>
-
-<form action="/users" method="POST">
-    <input type="text" name="username" value="User Name">
-    <input type="text" name="password" value="Password">
-    <input type="submit" name="" value="Sign Up">
-</form>
-    
+            <form action="/users" method="POST">
+                <input type="text" name="username" value="User Name" required>
+                <input type="text" name="password" value="Password" required>
+                <input class="in-up" type="submit" name="" value="Sign Up">
+            </form>
+            <div class="register-log">
+                <a href="/sessions/new">Log In</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

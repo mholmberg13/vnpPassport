@@ -65,6 +65,7 @@ body{
     border-radius: 2px;
     color: white;
     padding: 3px 8px 3px 8px;
+    cursor: pointer;
     
 }
 
@@ -96,11 +97,31 @@ body{
     border: 2px solid white;
     padding: 5px;
     margin: 7px;
+    margin-bottom: 15px;
+}
+
+input.in-up {
+    background-color: rgba(0, 0, 0, 0.288);
+    font-size: 17px;
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    padding: 5px;
+    margin: 15px;
+    cursor: pointer;
 }
 
 .landing-container h3 {
     margin-bottom: 30px;
     color: rgb(218, 126, 40);
+}
+
+.landing-container form {
+    margin-bottom: 10px;
+}
+
+.register-log a {
+    border: none;
 }
 
 .page-container {
@@ -155,6 +176,7 @@ body{
 .park-box h2 {
     padding-bottom: 0;
     color: rgb(218, 126, 40);
+    font-family: 'Anton', sans-serif;
 }
 
 a {
@@ -163,17 +185,11 @@ a {
     margin: 15px;
 }
 
-.show-page-container {
-    width: 90%;
-}
-
-.show-container {
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.26);
-    border-radius: 5px;
-    height: 80%;
-    width: 103%;
-    margin-top: -20px;
+.show-heading {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: 'Anton', sans-serif;
 }
 
 .show-img {
@@ -185,8 +201,54 @@ a {
 }
 
 .info {
-    background-color: rgba(0, 0, 0, 0.527);
     color: rgb(218, 126, 40);
     width: 30%;
-    align-self: center;
+    text-align: center;
+    flex-basis: 100%;
 }
+
+.edit-delete {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.edit-delete input {
+    background-color: rgba(0, 0, 0, 0);
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 2px;
+    color: white;
+    padding: 3px 8px 3px 8px;
+    cursor: pointer;
+}
+
+.new-edit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.input-container {
+    text-align: right;
+    width: auto;
+    margin-top: 30px;
+}
+
+.input-container input {
+    margin-bottom: 15px;
+    margin-right: 95px;
+}
+
+input.add-park {
+    margin-right: 135px;
+    background-color: rgba(0, 0, 0, 0);
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 2px;
+    color: white;
+    padding: 3px 8px 3px 8px;
+    cursor: pointer;
+}
+

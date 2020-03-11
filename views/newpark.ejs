@@ -3,20 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/app.css" />
+    <title>Edit Park</title>
 </head>
 <body>
-    <a href="/index">HOME</a>
-  <h3>Add New Park</h3>
-  <div class="container-container">
-    <div class="new-edit-container">
-      <form action="/index" method="POST">
-        Name: <input class="box" type="text" name="name" /><br />
-        State: <input class="box" type="text" name="state" /><br />
-        Date of Visit: <input class="box" type="text" name="dov" /><br />
-        Image: <input class="box" type="text" name="img" /><br />
-        <input class="add-park" type="submit" name="" value="Add Park" />
-      </form>
+  <div class="page-container">
+    <div class="container">
+      <%- include('../views/partials/nav.ejs') %>
+      <div class="new-edit">
+        <h3>Add New Park</h3>
+        <div class="input-container">
+          <form action="/index" method="POST">
+            Name: <input class="box" type="text" name="name" required/><br />
+            State: <input class="box" type="text" name="state" required/><br />
+            Date of Visit: <input class="box" type="text" name="dov" required/><br />
+            Image: <input class="box" type="text" name="img" required/><br />
+            <input class="add-park" type="submit" name="" value="Add Park" />
+          </form>
+        </div>
+      </div>
     </div>
   </div>
 </body>

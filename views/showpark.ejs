@@ -3,29 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Anton&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="/css/app.css" />
     <title><%= park.name %></title>
 </head>
-<body>
-  <div class="show-page-container">
-    <%- include('../views/partials/nav.ejs') %>
-      <div class="show-container">
-        
-        <h2><%= park.name %></h2>
-        <img class="show-img" src="<%= park.img %>"> 
-        <div class="info">
-          NAME: <%= park.name %> <br>
-          STATE: <%= park.state %> <br>
-          DATE OF VIST: <%= park.dov  %><br>
-        </div>
-        <a href="/index/<%= park.id %>/edit">EDIT PARK</a>
-        <div class="delete">
-            <form action="/index/<%= park.id %>?_method=DELETE" method="POST">
-              <input type="submit" value="DELETE" />
-            </form>
-        </div>
+  <body>
+    <div class="page-container">
+      <div class="container">
+          <%- include('../views/partials/nav.ejs') %>
+          <div class="show-heading">
+            <h2><%= park.name %></h2>
+          </div>
+          <img class="show-img" src="<%= park.img %>"> 
+          <div class="info">
+            NAME: <%= park.name %> <br>
+            STATE: <%= park.state %> <br>
+            DATE OF VIST: <%= park.dov  %><br>
+          </div>
+          <div class="edit-delete">
+            <a href="/index/<%= park.id %>/edit">EDIT PARK</a>
+              <form action="/index/<%= park.id %>?_method=DELETE" method="POST">
+                <input type="submit" value="DELETE" />
+              </form>
+          </div>
       </div>
-      </div>
-</body>
+    </div>
+  </body>
 </html>
