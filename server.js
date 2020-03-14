@@ -38,14 +38,16 @@ mongoose.connection.once("open", () => {
 
 /////////////
 
-const parksController = require('./controllers/parks_router.js');
-app.use('/', parksController);
-
 const usersController = require('./controllers/users.js');
 app.use('/users', usersController);
 
 const sessionsController = require('./controllers/sessions.js');
 app.use('/sessions', sessionsController);
+
+const parksController = require('./controllers/parks_router.js');
+app.use('/', parksController);
+
+
 
 
 // Web server:
