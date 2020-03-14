@@ -14,7 +14,7 @@
             <div class="new-edit">
                 <h3>Edit Park</h3>
                 <div class="input-container">
-                    <form action="/index/<%= park.id %>?_method=PUT" method="POST">
+                    <form action="/<%= park.id %>?_method=PUT" method="POST">
                         Name: <input class="box" type="text" name="name" value="<%= park.name %>"/><br />
                         State: <input class="box" type="text" name="state" value="<%= park.state %>"/><br />
                         Date of Visit: <input class="box" type="text" name="dov" value="<%= park.dov %>"/><br />

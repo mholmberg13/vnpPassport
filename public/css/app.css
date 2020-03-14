@@ -185,26 +185,34 @@ a {
     margin: 15px;
 }
 
+
 .show-heading {
     flex-basis: 100%;
     display: flex;
     justify-content: center;
     font-family: 'Anton', sans-serif;
+    font-size: 35px;
+    color: white;
+}
+
+.show-heading h2 {
+    margin: 10px;
 }
 
 .show-img {
-    height: 500px;
-    width: 750px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    height: 40%;
+    width: 90%;
+    margin-top: 5px;
     align-self: center;
 }
 
 .info {
-    color: rgb(218, 126, 40);
+    color: rgb(255, 255, 255);
     width: 30%;
     text-align: center;
     flex-basis: 100%;
+    font-size: 2vw;
+    padding: 15px;
 }
 
 .edit-delete {

@@ -41,12 +41,18 @@ router.get('/:id', (req, res) => {
 
 // INDEX
 router.get("/", (req, res) => {
-    Parks.find({}, (error, parks) => {
+    if(req.session.currentUser) {
+        Parks.find({userId: req.session.currentUser._id}, (err, foundParks) => {
+            res.render("index.ejs", {
+                currentUser: req.session.currentUser,  
+                parks: foundParks 
+            })
+        })
+    }else {
         res.render('index.ejs', {
-        currentUser: req.session.currentUser,
-        parks
+        currentUser: req.session.currentUser
         });
-    });
+    }
 });
     
 
@@ -55,22 +61,23 @@ router.get("/", (req, res) => {
 
 // CREATE
 router.post('/', (req, res) => {
+    req.body.userId = req.session.currentUser._id
     Parks.create(req.body, (err, data) => {
-        res.redirect('/index')
+        res.redirect('/')
     });
 });
 
 // DESTROY
 router.delete('/:id', (req, res) => {
     Parks.findByIdAndDelete(req.params.id, (err, data) => {
-        res.redirect('/index/');
+        res.redirect('/');
     });
 });
 
 // UPDATE
 router.put('/:id', (req, res) => {
     Parks.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, data) => {
-        res.redirect('/index');
+        res.redirect('/');
     });
 });
 
