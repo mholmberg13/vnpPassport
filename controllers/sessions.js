@@ -24,7 +24,7 @@ router.post('/', (req, res)=>{
     });
 });
 
-router.delete('/sessions', (req, res) => {
+router.delete('/', (req, res) => {
     req.session.destroy(()=>{
         res.redirect('/');
     });
